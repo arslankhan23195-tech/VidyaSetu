@@ -3,11 +3,12 @@ workflows:
     name: Android Workflow
     environment:
       java: 17
-      gradle: 9.3.1
     scripts:
-      - name: Build APK
+      - name: Build APK with Gradle 9.3.1
         script: |
+          wget -q https://services.gradle.org/distributions/gradle-9.3.1-bin.zip
+          unzip -q gradle-9.3.1-bin.zip
+          export PATH=$PWD/gradle-9.3.1/bin:$PATH
           gradle assembleDebug
     artifacts:
       - app/build/outputs/apk/debug/*.apk
-
