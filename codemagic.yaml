@@ -3,10 +3,11 @@ workflows:
     name: Android Workflow
     environment:
       java: 17
+      gradle: 9.3.1
     scripts:
       - name: Build APK
         script: |
-          chmod +x gradlew
-          ./gradlew assembleDebug
+          gradle assembleDebug
     artifacts:
       - app/build/outputs/apk/debug/*.apk
+
