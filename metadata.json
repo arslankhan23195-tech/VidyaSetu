@@ -1,0 +1,6 @@
+{
+  "name": "VidyaSetu",
+  "description": "Premium Indian EdTech learning platform for Class 6-12, JEE, NEET, CUET & Govt exam aspirants.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
